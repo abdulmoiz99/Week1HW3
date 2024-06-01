@@ -9,7 +9,9 @@ public class Main {
     }
 
     public static int arrayMax(int[] arr, int index) {
-
+        if (arr.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
         if (index == 0) return arr[0];
 
         int max = arrayMax(arr, index - 1);
